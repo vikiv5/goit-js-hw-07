@@ -26,3 +26,17 @@ console.log(galleryItems);
  
 imgList.insertAdjacentHTML('beforeend', imgMarkup)
 imgList.addEventListener ("click" , onImgClick)
+
+function onImgClick (e){
+    e.preventDefault();
+    if (e.target.nodeName !=="IMG"){
+        return
+    }
+
+const instance = basicLightbox.create(`
+    <div class ="modal">
+    <img  src="${e.target.dataset.source}">
+        </div> 
+    `)
+    instance.show()
+}
