@@ -10,7 +10,7 @@ imgList.insertAdjacentHTML('beforeend', imgMarkup);
  function createImagesMarkup (galleryItems) {
     return galleryItems
     .map(({preview, original, description}) => {
-       return ` <li><a class = "gallery__item " href="${original}">
+       return ` <li><a class = "gallery__link " href="${original}">
        <img 
        class = "gallery__image" 
        src = "${preview}"
@@ -18,11 +18,11 @@ imgList.insertAdjacentHTML('beforeend', imgMarkup);
        </a></li>`;
     }) .join ("");
  
- }
- //new SimpleLightbox(".gallery a");
- const gallery = new SimpleLightbox ('.gallery a', 
- {
-    captions : true ,
-    captionsData : "alt", 
-    captionDelay:250,
+}
+
+const gallery = new SimpleLightbox('.gallery a', 
+{
+captions:true,
+captionsData:"alt" ,
+captionDelay : 250 ,
  }) ;
