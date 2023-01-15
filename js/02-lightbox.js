@@ -20,7 +20,7 @@ imgList.insertAdjacentHTML('beforeend', imgMarkup);
  
 }
 
-const gallery = new SimpleLightbox('.gallery a', 
+new SimpleLightbox('.gallery a', 
 {
 captions:true,
 captionsData:"alt" ,
